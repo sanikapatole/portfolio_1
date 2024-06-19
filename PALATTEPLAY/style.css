@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+    
+}
+header nav {
+    background-color: rgb(10, 18, 43);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    
+}
+
+header nav h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: Gill Sans;
+    color: white;
+}
+
+header nav form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-photo{
+    text-align: center;
+}
+.recipe-photo img{
+    height:700px;
+    width:1000px;
+    margin-top: 20px;
+    border-radius: 30px;
+
+}
+/*profile icon */
+.action{
+    position: fixed;
+    top:20px;
+    right:30px;
+}
+.profile{
+    position: relative;
+    width:60px;
+    height: 60px;
+    border-radius:50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.profile img{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.menu{
+    position: absolute;
+    margin-top:25px;
+    margin-right: 5px;
+    top:100px;
+    right:0px;
+    padding: 10px 20px;
+    background:white;
+    width:220px;
+    box-sizing:0 5px 25px rgba(67, 54, 54, 0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow:0 5px 10px #5f5b76;
+}
+.menu.active{
+    top:80px;
+    visibility:visible;
+    opacity: 1;
+}
+
+.menu::before{
+    content: '';
+    position: absolute;
+    top:-5px;
+    right:20px;
+    width:20px;
+    height:20px;
+    background:white;
+    transform: rotate(45deg);
+}
+
+.menu ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top:1px solid rgba(0,0,0,0.05);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li img{
+max-width: 20px;
+margin-right: 20px;
+transition: 0.5s;
+}
+ .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(99, 93, 93);
+    font-weight: 400;
+    font-size:20px;
+    transition: 0.5s;
+}
+ .menu ul li:hover a{
+    color: rgb(250, 0, 0);
+}
+
+form input[type="text"] {
+    margin-right:20px;
+    z-index: 1;
+}
+form input[type="text"],
+button[type="submit"] {
+    border: none;
+    font-size: 16px;
+    padding: 1px;
+    border-radius: 5px;
+    width: 180px;
+    height: 45px;
+    text-align: center;
+    margin-right:40px;
+    transform:translateX(-40%);
+    
+}
+
+form button[type="submit"] {
+    background-color: rgb(52, 52, 68);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover,
+.recipe button:hover,
+.recipe-close-btn:hover {
+    background-color: black;
+}
+
+/* Main Section */
+.recipe-container {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+.recipe-container h2{
+    font-size: 42px;
+    height: 10px;
+    text-shadow: 2px 2px 4px rgba(14, 9, 85, 0.705);
+    text-decoration:#8b53ff;
+}
+.recipe-container h2:hover{
+    cursor: pointer;
+    color:#614b8e
+}
+.recipe {
+    background-color: rgba(1, 4, 95, 0.6);
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px black, -5px -5px 10px black;
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.5s ease-in-out; /* Corrected transition property */
+    color: white;
+}
+
+.recipe:hover {
+    transform: scale(1.1);
+}
+
+.recipe img {
+    height: 300px;
+}
+
+.recipe h3 {
+    font-size: 24px;
+}
+
+.recipe p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.recipe button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: rgb(40, 12, 71);
+    color: white;
+    border: none;
+}
+
+/* Recipe Details */
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(31, 4, 104);
+    width: 40%;
+    height: 60%;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+    color: white;
+}
+
+.recipe-details-content {
+    padding: 30px;
+}
+
+.recipeName {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.ingredientList li {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.recipeInstructions {
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+.recipeName,
+.ingredientList,
+.recipeInstructions {
+    margin-bottom: 10px;
+}
+
+.recipe-close-btn {
+    font-size: 16px;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px; /* Corrected property */
+}
+
+/* Scrollbar */
+.recipe-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(236, 234, 234);
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(129, 128, 128);
+}
+
+.recipe-link {
+    text-align: center;
+}
+
+.recipe-link a {
+    color: white;
+}
+
+/* Responsive part */
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+   
+}
+/*recipes of the day*/
+.wrapper {
+    max-width: 2000px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+
+.wrapper i:first-child {
+    left: -22px;
+    top: 47%;
+}
+
+.wrapper i:last-child{
+    right:-22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns:calc((100% / 3) - 30px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior:smooth;
+    scrollbar-width: none;
+    
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #150c46;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+    background: #8b53ff;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+.card .img img:hover{
+    cursor: pointer;
+    box-shadow:0 30px 30px rgb(50, 43, 43);
+    transition: transform 0.5s linear;
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+    color:white;
+}
+
+.carousel .card span {
+    color: #f7f8ff;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 3) - 30px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}

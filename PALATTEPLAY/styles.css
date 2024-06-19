@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.543);
+    color: rgb(0, 0, 0);
+    
+}
+
+header nav {
+    background-color: rgb(10, 18, 43);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    
+}
+
+header nav h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: Gill Sans;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top:10px;
+    color:rgb(62, 65, 152);
+    font-size:45px;
+    letter-spacing: 2px;
+    text-decoration:underline ;
+}
+
+.rec-container{
+    text-align: center;
+    color:rgb(6, 6, 6);
+    display:grid;
+    background-color: rgb(116, 116, 233);
+    padding:10px;
+    margin-top:20px;
+    border-radius:20px;
+    position:absolute;
+    overflow: hidden;
+}
+.rec-container ul{
+    font-size:28px;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    text-align: center;
+}
+.rec-container li{
+    font-family: 'Lucida Sans';
+    color:white;
+    font-size:24px;
+    justify-content: center;
+    text-align:center;
+}
+.rec-container p{
+    font-family:'Lucida Sans';
+    color:white;
+    font-size:24px;
+    justify-content: center;
+    text-align:center;
+    margin-left:40px;
+    margin-right: 40px;
+    margin-bottom:30px;
+}
+.rec-container a{
+    color:rgb(67, 66, 82);
+    font-size:40px;
+    margin: 15px;
+}

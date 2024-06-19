@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Portfolio
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/e5191ed801.js" crossorigin="anonymous"></script>
+        </head>
+        <body>
+            <div id="header">
+              <div class="container">
+                <nav>
+                    <img src="logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Known Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Student/Learner</p>
+                    <h1>Hi, I'm <span>Sanika</span> Patole </h1>
+                </div>
+              </div>
+            </div>
+<!-------------------------about------------------>!
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="aboutme.jpg">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>I'm a Computer Science graduate who finds joy in coding and navigating the internet's meme culture. With a knack for responsibility and eligibility, I thrive in team environments, blending professionalism with a passion for creativity. My journey intertwines technology and humor, as I code with precision and indulge in the communal laughter of memes.<br>
+                                “You miss 100 percent of the chances you don't take. “
+                                                                                        -Michael Scott</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                                <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                            </div>   
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                       <li><span>Web Development</span><br>HTML,CSS</li> 
+                                       <li><span>Python</span></li>
+                                        <li><span>R/RStudio</span></li>
+                                        <li><span>JavaScript</span></li>
+                                        <li><span>PHP</span></li>
+                                        <li><span>Database Management</span><br>MySQL</li>
+                                        <li><span>Photo and Video Editing</span><br>Adobe After Effects,Adobe Photoshop</li>
+                                        <li><span>Cloud Computing</span></li>
+                                        
+                                </ul>
+                            </div>   
+
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                       <li><span>2024-Current</span><br>Bsc C.S graduate</li> 
+                                       <li><span>2021-2024</span><br>SIES College Of Arts and Science</li>
+                                        <li><span>2020-2021</span><br>HSC from VVJC</li>
+                                        <li><span>2018-2019</span><br>SSC from VVHS</li>
+                                </ul>
+                            </div> 
+                            
+                            
+                            <div class="tab-contents" id="projects">
+                                <ul>
+                                       <li><span>PalattePlay</span><br>Palate Play is a comprehensive platform designed to cater to culinary enthusiasts and professionals alike. It offers a vast array of features aimed at enhancing the cooking experience and fostering a vibrant community of food enthusiasts.
+                                       </li> 
+                                       <li><span>DigiDoctor</span><br>
+                                        It is an innovative online health 
+                                        assessment tool designed to empower individuals with 
+                                        valuable preliminary health information based on 
+                                        reported symptoms.</li>
+                                        <li><span>MyHistory</span><br>This website tells us about the history of the maratha ruler Shri Chattrapati Shivaji Maharaj</li>                            
+                                </ul>
+                            </div>                                                         
+
+                                                                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!---------------------portfolio----------------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Known Skills</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Web Designing</h2>
+                <p>Web designing requires a blend of technical and creative skills. Key competencies include proficiency in HTML, CSS, and JavaScript for building and styling web pages, along with familiarity with frameworks like Bootstrap and libraries such as React or Angular. Strong graphic design skills and knowledge of design software like Adobe Photoshop and Illustrator are essential for creating visually appealing elements. Understanding user experience (UX) principles ensures intuitive and engaging navigation, while knowledge of responsive design ensures compatibility across various devices. Additionally, skills in search engine optimization (SEO), attention to detail, problem-solving, and an understanding of web accessibility standards are crucial for creating effective, inclusive websites.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Cloud Computing</h2>
+                <p>Cloud computing is the delivery of computing services—including storage, processing power, and applications—over the internet, enabling on-demand access to resources without direct active management by the user. This technology allows for scalable and flexible resource utilization, making it possible for businesses and individuals to use as much or as little computing power as needed. Cloud computing is typically categorized into three main service models: Infrastructure as a Service (IaaS), providing virtualized computing resources; Platform as a Service (PaaS), offering hardware and software tools over the internet; and Software as a Service (SaaS), delivering software applications online. It offers numerous benefits such as cost savings, increased efficiency, remote accessibility, and ease of collaboration, driving innovation and agility across various industries.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2>Cybersecurity</h2>
+                <p>Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and damage. It involves implementing measures such as firewalls, encryption, antivirus software, and multi-factor authentication to safeguard sensitive information and ensure the integrity, confidentiality, and availability of data. Cybersecurity also encompasses strategies like risk assessment, incident response, and regular security audits to detect vulnerabilities and respond to threats. With the increasing frequency and sophistication of cyber threats, including malware, phishing, and ransomware, robust cybersecurity practices are crucial for individuals, businesses, and governments to protect against data breaches, financial loss, and reputational damage.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!----------portfolio----->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.jpeg">
+                <div class="layer">
+                    <h3>PalattePlay</h3>
+                    <p>Palate Play is a comprehensive platform designed to cater to culinary enthusiasts. It offers a vast array of features aimed at enhancing the cooking experience 
+                        and fostering a vibrant community of food enthusiasts.
+The website provides a vast database of recipes spanning various cuisines, dietary 
+                        preferences, and skill levels, meticulously curated and constantly updated by a team of experts 
+                        and community contributors.</p>
+                    <a href="PALATTEPLAY/first.html"><i class="fa-solid fa-arrow-pointer"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="work2.jpeg">
+                <div class="layer">
+                    <h3>DigiDoctor</h3>
+                    <p>The Symptom Checker system is a sophisticated 
+                        online health assessment tool designed to assist 
+                        individuals in evaluating their health concerns 
+                        based on reported symptoms. It comprises a user friendly interface that allows users to input 
+                        their symptoms, which are then processed by a 
+                        robust algorithm</p>
+                    <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="work3.gif">
+                <div class="layer">
+                    <h3>KnowYourHistory</h3>
+                    <p>It is a comprehensive application designed to offer an in-depth look into the rich and diverse history of the Marathi-speaking regions of India. Whether you are a history enthusiast, student, researcher, or just curious about Marathi culture and heritage, this app serves as your go-to source for accurate and detailed information.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!----------------------contact----------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>patole.sanika@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7977160144</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/notsanika1011?igsh=YjIzemcybjg1amt2"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sanika-patole-b498b9222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/schruted143?t=SovfLmIs3QJWWn6ZdqdjvA&s=08 "><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="RESUME.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                <span id="msg"></span>
+                </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Sanika.Made with <i class="fas fa-heart"></i> by Sanika<br>All rights reserved to Sanika <br>2024-2025</p>
+    </div>
+</div>
+
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+ 
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+            <script>
+                var sidemeu=document.getElementById("sidemenu");
+
+                function openmenu(){
+                    sidemeu.style.right="0";
+                }
+
+                function closemenu(){
+                    sidemeu.style.right="-200px";
+                }
+            </script>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyCdv5GPc0XJvjGKMYsTJem5E0y9P-G4QOaZiG9VF8UgT4jg5KHsLORLMCJpunS1cu-sg/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg=document.getElementById("msg")
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML="Message Sent Successfully"
+                        setTimeout(function(){
+                            msg.innerHTML=""
+                        },5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
+        </body>
+</html>
